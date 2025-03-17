@@ -3,13 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate</title>
+    <title>Donate Now</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Donate to Help</h2>
-    <p>Choose your donation method:</p>
+    <header>
+        <h1>Make a Donation</h1>
+        <p>Your support makes a difference!</p>
+    </header>
 
-    <button onclick="window.location.href='https://www.paypal.com/donate'">Donate via PayPal</button>
-    <button onclick="window.location.href='https://www.bitcoin.com/'">Donate via Bitcoin</button>
+    <section class="donation-form">
+        <h2>Select Donation Method</h2>
+        <form action="process-donation.php" method="POST">
+            <label for="amount">Amount ($):</label>
+            <input type="number" id="amount" name="amount" required>
+            
+            <label for="method">Payment Method:</label>
+            <select id="method" name="method">
+                <option value="paypal">PayPal</option>
+                <option value="credit">Credit/Debit Card</option>
+                <option value="bitcoin">Bitcoin</option>
+            </select>
+
+            <button type="submit">Donate</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Donation Website. All rights reserved.</p>
+    </footer>
 </body>
 </html>
