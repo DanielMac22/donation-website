@@ -3,75 +3,75 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Header Section */
+/* Header */
 header {
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: #ff9800;
     color: white;
-    padding: 50px 20px;
+    padding: 20px;
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    margin: 0;
+    font-size: 2em;
 }
 
-p {
-    font-size: 1.2rem;
-}
-
-/* Donation Button */
+/* Donate Section */
 .donate-section {
-    margin: 30px 0;
+    background: white;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.donate-btn {
-    background: #ff7e5f;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
+.donate-section h2 {
+    color: #d32f2f;
 }
 
-.donate-btn:hover {
-    background: #feb47b;
-}
-
-/* Gallery Section */
-.gallery {
-    margin: 50px auto;
-    max-width: 80%;
-}
-
-.gallery h2 {
-    font-size: 2rem;
+.donate-section p {
+    font-size: 1.1em;
     margin-bottom: 20px;
 }
 
-.image-container {
+/* Image Gallery */
+.gallery {
+    padding: 20px;
+    background: #fff;
+}
+
+.gallery h2 {
+    margin-bottom: 20px;
+}
+
+.gallery-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
-.image-container img {
-    width: 45%;
-    height: auto;
+.gallery-container img {
+    width: 300px;
+    height: 200px;
     border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
 }
 
 /* Footer */
 footer {
     background: #222;
     color: white;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 10px;
+    margin-top: 20px;
 }
