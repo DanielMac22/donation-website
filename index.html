@@ -4,25 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donation Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <div class="container">
         <h1>Welcome to the Donation Website</h1>
-        <nav>
-            <a href="signup.html">Sign Up</a>
-            <a href="login.html">Login</a>
-        </nav>
-    </header>
-    
-    <section class="donation-section">
-        <h2>Donate Now</h2>
         <p>Support those in need with a donation.</p>
-        <button onclick="window.location.href='donate.html'">Donate</button>
-    </section>
 
-    <footer>
-        <p>© 2025 Donation Website</p>
-    </footer>
+        <button onclick="donate()">Donate Now</button>
+
+        <p>&copy; 2025 Donation Website</p>
+    </div>
+
+    <script>
+        function donate() {
+            alert("Donation feature coming soon!");
+        }
+    </script>
 </body>
 </html>
