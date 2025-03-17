@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Chat with Donors</h2>
+    <div id="chat-box"></div>
+    <input type="text" id="message" placeholder="Type a message">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        function sendMessage() {
+            let msg = document.getElementById('message').value;
+            document.getElementById('chat-box').innerHTML += `<p>${msg}</p>`;
+            document.getElementById('message').value = '';
+        }
+    </script>
+</body>
+</html>
