@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donation Website</title>
+    <title>Donate & Support</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
         <h1>Support Our Cause</h1>
-        <p>Your donation helps us make a difference. Click below to donate securely via PayPal.</p>
+        <p>Your donation helps us make a difference.</p>
     </header>
 
     <section class="donate-section">
+        <h2>Make a Donation</h2>
+        <p>Click below to donate securely via PayPal.</p>
+
         <form action="https://www.paypal.com/donate" method="post" target="_top">
             <input type="hidden" name="hosted_button_id" value="N78VSHXZH375J" />
-            <button type="submit" class="donate-btn">Donate Now</button>
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" 
+                   border="0" name="submit" 
+                   title="Donate with PayPal" 
+                   alt="Donate with PayPal button">
+            <img alt="" border="0" src="https://www.paypal.com/en_KE/i/scr/pixel.gif" width="1" height="1" />
         </form>
     </section>
 
     <section class="gallery">
-        <h2>See Who You're Helping</h2>
-        <div class="image-container">
-            <img src="images/children-hunger.jpg" alt="Children suffering from hunger">
-            <img src="images/woman-crying.jpg" alt="Woman crying for help">
+        <h2>See Who Needs Your Help</h2>
+        <div class="gallery-container">
+            <img src="images/hungry_child.jpg" alt="Hungry Child">
+            <img src="images/crying_woman.jpg" alt="Crying Woman">
+            <img src="images/starving_children.jpg" alt="Starving Children">
         </div>
     </section>
 
