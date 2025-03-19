@@ -125,7 +125,6 @@
     <div class="btc-donate">
       <h2>Donate with Bitcoin</h2>
       <p>Scan the QR code to send Bitcoin:</p>
-      <!-- Ensure your btc-qr.png is in the 'images' folder -->
       <img src="images/btc-qr.png" alt="Bitcoin QR Code" class="btc-qr">
       <p class="btc-address">17FQMZT79jshicasLJzgx4m8GKNxDAsKiv</p>
     </div>
@@ -145,7 +144,7 @@
         label: 'donate'
       },
       createOrder: function(data, actions) {
-        // Set donation amount. Modify '10.00' if needed, or make it dynamic.
+        // Set donation amount. Modify '10.00' if needed.
         return actions.order.create({
           purchase_units: [{
             amount: {
