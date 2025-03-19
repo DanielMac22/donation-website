@@ -1,61 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feed the Future - Donate</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEED THE FUTURE</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Background Image Slider */
+        .background-slider {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200vh;
+            background-size: cover;
+            background-position: center;
+            animation: slide 15s infinite alternate;
+        }
+
+        @keyframes slide {
+            100% { background-image: url('https://source.unsplash.com/1600x900/?hunger,africa'); }
+            100% { background-image: url('https://source.unsplash.com/1600x900/?poverty,children'); }
+            100% { background-image: url('https://source.unsplash.com/1600x900/?starving,hope'); }
+        }
+
+        /* Content Box */
+        .content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 5vh auto;
+            padding: 2em;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Donation Buttons */
+        .button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 12px;
+            background: #ff9800;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #d32f2f;
+        }
+
+        /* Bitcoin Section */
+        .btc-donate {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btc-qr {
+            width: 150px;
+            height: 150px;
+            margin: 10px auto;
+        }
+
+        .btc-address {
+            font-size: 1em;
+            background: #222;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            word-break: break-word;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-      <h1>Feed the Future</h1>
-      <p>Help End Child Hunger in Africa</p>
-  </header>
+    <div class="background-slider"></div>
 
-  <!-- Donate Section with Sliding Background -->
-  <section class="donate-section">
-      <!-- Bitcoin Donation Section -->
-      <section class="btc-donate-section">
-          <h2>Donate with Bitcoin</h2>
-          <p>Scan the QR code below to send Bitcoin donations, or send BTC manually:</p>
-          <img src="images/btc-qr.png" alt="Bitcoin QR Code" class="btc-qr">
-          <p class="btc-address">17FQMZT79jshicasLJzgx4m8GKNxDAsKiv</p>
-      </section>
+    <div class="content">
+        <h1>Feed the Future</h1>
+        <h2>Help End Child Hunger in Africa</h2>
+        <p>Millions of children in Africa go to bed hungry every night. Your donation can help provide food and nutrition to those in need.</p>
 
-      <!-- Sliding Background for Donation Content -->
-      <div class="slideshow"></div>
-      
-      <!-- Donation Content -->
-      <div class="donate-content">
-          <h2>Make a Donation</h2>
-          <p>Your donation can help provide food and nutrition to children in need.</p>
-          <form action="https://www.paypal.com/donate" method="post" target="_top">
-              <input type="hidden" name="hosted_button_id" value="N78VSHXZH375J" />
-              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" 
-                     border="0" name="submit" 
-                     title="Donate with PayPal" 
-                     alt="Donate with PayPal button">
-              <img alt="" border="0" src="https://www.paypal.com/en_KE/i/scr/pixel.gif" width="1" height="1" />
-          </form>
-      </div>
-  </section>
+        <!-- PayPal Donate Button -->
+        <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" class="button">Donate with PayPal</a>
 
-  <!-- Gallery Section -->
-  <section class="gallery">
-      <h2>See Who Needs Your Help</h2>
-      <div class="gallery-container">
-          <img src="images/10.jpg" alt="Hungry Child">
-          <img src="images/11.jpg" alt="Crying Woman">
-          <img src="images/9.jpg" alt="Starving Children">
-      </div>
-  </section>
+        <!-- Bitcoin Donate Section -->
+        <div class="btc-donate">
+            <h2>Donate with Bitcoin</h2>
+            <p>Scan the QR code to send Bitcoin:</p>
+            <img src="C:\Users\user\Downloads\images/btc-qr.png" alt="Bitcoin QR Code" class="btc-qr">
+            <p class="btc-address">17FQMZT79jshicasLJzgx4m8GKNxDAsKiv</p>
+        </div>
+    </div>
 
-  <!-- Footer -->
-  <footer>
-      <p>&copy; 2025 Feed the Future. All Rights Reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Feed the Future. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
