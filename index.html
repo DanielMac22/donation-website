@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate & Support</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feed the Future - Donate</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>Support Our Cause</h1>
-        <p>Your donation helps us make a difference.</p>
-    </header>
+  <!-- Header -->
+  <header>
+      <h1>Feed the Future</h1>
+      <p>Help End Child Hunger in Africa</p>
+  </header>
 
-    <section class="donate-section">
-        <section class="btc-donate-section">
-    <h2>Donate with Bitcoin</h2>
-    <p>Scan the QR code below to send Bitcoin donations.</p>
-    <img src="images/btc-qr.png" alt="Bitcoin QR Code" class="btc-qr">
-    <p>Or send BTC manually to:</p>
-    <p class="btc-address">1YourBitcoinAddressHere</p>
-</section>
-        <div class="slideshow"></div> <!-- Sliding Background -->
-        <div class="donate-content">
-            <h2>Make a Donation</h2>
-            <p>Click below to donate securely via PayPal.</p>
-            <form action="https://www.paypal.com/donate" method="post" target="_top">
-                <input type="hidden" name="hosted_button_id" value="N78VSHXZH375J" />
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" 
-                       border="0" name="submit" 
-                       title="Donate with PayPal" 
-                       alt="Donate with PayPal button">
-                <img alt="" border="0" src="https://www.paypal.com/en_KE/i/scr/pixel.gif" width="1" height="1" />
-            </form>
-        </div>
-    </section>
+  <!-- Donate Section with Sliding Background -->
+  <section class="donate-section">
+      <!-- Bitcoin Donation Section -->
+      <section class="btc-donate-section">
+          <h2>Donate with Bitcoin</h2>
+          <p>Scan the QR code below to send Bitcoin donations, or send BTC manually:</p>
+          <img src="images/btc-qr.png" alt="Bitcoin QR Code" class="btc-qr">
+          <p class="btc-address">17FQMZT79jshicasLJzgx4m8GKNxDAsKiv</p>
+      </section>
 
-    <section class="gallery">
-        <h2>See Who Needs Your Help</h2>
-        <div class="gallery-container">
-            <img src="images/10.jpg" alt="Hungry Child">
-            <img src="images/11.jpg" alt="Crying Woman">
-            <img src="images/9.jpg" alt="Starving Children">
-        </div>
-    </section>
+      <!-- Sliding Background for Donation Content -->
+      <div class="slideshow"></div>
+      
+      <!-- Donation Content -->
+      <div class="donate-content">
+          <h2>Make a Donation</h2>
+          <p>Your donation can help provide food and nutrition to children in need.</p>
+          <form action="https://www.paypal.com/donate" method="post" target="_top">
+              <input type="hidden" name="hosted_button_id" value="N78VSHXZH375J" />
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" 
+                     border="0" name="submit" 
+                     title="Donate with PayPal" 
+                     alt="Donate with PayPal button">
+              <img alt="" border="0" src="https://www.paypal.com/en_KE/i/scr/pixel.gif" width="1" height="1" />
+          </form>
+      </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Donation Website. All Rights Reserved.</p>
-    </footer>
+  <!-- Gallery Section -->
+  <section class="gallery">
+      <h2>See Who Needs Your Help</h2>
+      <div class="gallery-container">
+          <img src="images/10.jpg" alt="Hungry Child">
+          <img src="images/11.jpg" alt="Crying Woman">
+          <img src="images/9.jpg" alt="Starving Children">
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+      <p>&copy; 2025 Feed the Future. All Rights Reserved.</p>
+  </footer>
 
 </body>
 </html>
