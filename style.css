@@ -95,3 +95,34 @@ footer {
     padding: 10px;
     margin-top: 20px;
 }
+/* Bitcoin Donation Section */
+.btc-donate-section {
+    background: #0a0a0a;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.4);
+}
+
+.btc-donate-section h2 {
+    color: #ff9800;
+}
+
+.btc-qr {
+    width: 200px;
+    height: 200px;
+    margin: 10px 0;
+}
+
+.btc-address {
+    font-size: 1.2em;
+    font-weight: bold;
+    word-break: break-word;
+    background: #222;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
