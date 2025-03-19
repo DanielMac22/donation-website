@@ -56,7 +56,7 @@
       margin-bottom: 20px;
     }
     
-    /* Unified Donation Button */
+    /* Unified Donation Button Container */
     #paypal-button-container {
       margin: 20px auto;
     }
@@ -87,7 +87,7 @@
       background: rgba(0, 0, 0, 0.8);
     }
   </style>
-  <!-- PayPal JS SDK for Unified Payment Option (allows credit/debit card & PayPal) -->
+  <!-- PayPal JS SDK for Unified Donation Option -->
   <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
 </head>
 <body>
@@ -99,10 +99,10 @@
     <h2>Help End Child Hunger in Africa</h2>
     <p>Millions of children in Africa go to bed hungry every night. Your donation can help provide food and nutrition to those in need.</p>
 
-    <!-- Unified PayPal Donation Button -->
+    <!-- Unified PayPal Donation Button (handles both PayPal & Credit/Debit Card) -->
     <div id="paypal-button-container"></div>
 
-    <!-- Bitcoin Donate Section -->
+    <!-- Bitcoin Donation Section -->
     <div class="btc-donate">
       <h2>Donate with Bitcoin</h2>
       <p>Scan the QR code to send Bitcoin:</p>
@@ -116,7 +116,7 @@
   </footer>
 
   <script>
-    // Render the unified PayPal button (covers both PayPal and credit/debit card payments)
+    // Render the unified PayPal donation button
     paypal.Buttons({
       style: {
         shape: 'rect',
@@ -125,7 +125,7 @@
         label: 'donate'
       },
       createOrder: function(data, actions) {
-        // Set donation amount. Modify '10.00' if needed.
+        // Set donation amount. Change '10.00' as needed or make dynamic.
         return actions.order.create({
           purchase_units: [{
             amount: {
