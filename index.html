@@ -56,9 +56,39 @@
       margin-bottom: 20px;
     }
     
-    /* Unified Donation Button Container */
-    #paypal-button-container {
-      margin: 20px auto;
+    /* Donation Options Container */
+    .donation-options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .donation-option {
+      flex: 1 1 300px;
+      padding: 1em;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+    }
+    .donation-option h3 {
+      margin-bottom: 10px;
+    }
+    
+    /* Button Styles */
+    .button {
+      display: inline-block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 12px;
+      background: #ff9800;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      transition: 0.3s;
+    }
+    .button:hover {
+      background: #d32f2f;
     }
     
     /* Bitcoin Section */
@@ -87,7 +117,7 @@
       background: rgba(0, 0, 0, 0.8);
     }
   </style>
-  <!-- PayPal JS SDK for Unified Donation Option -->
+  <!-- PayPal JS SDK for Credit/Debit Card Donations -->
   <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
 </head>
 <body>
@@ -99,10 +129,30 @@
     <h2>Help End Child Hunger in Africa</h2>
     <p>Millions of children in Africa go to bed hungry every night. Your donation can help provide food and nutrition to those in need.</p>
 
-    <!-- Unified PayPal Donation Button (handles both PayPal & Credit/Debit Card) -->
-    <div id="paypal-button-container"></div>
+    <!-- Donation Options -->
+    <div class="donation-options">
+      
+      <!-- Option 1: Donate with PayPal -->
+      <div class="donation-option">
+        <h3>Donate with PayPal</h3>
+        <!-- PayPal Donate Button (Hosted Button) -->
+        <form action="https://www.paypal.com/donate" method="post" target="_top">
+          <input type="hidden" name="hosted_button_id" value="JRPXRVT6WQP7J" />
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+          <img alt="" border="0" src="https://www.paypal.com/en_KE/i/scr/pixel.gif" width="1" height="1" />
+        </form>
+      </div>
+      
+      <!-- Option 2: Donate with Credit/Debit Card -->
+      <div class="donation-option">
+        <h3>Donate with Credit/Debit Card</h3>
+        <!-- PayPal Credit/Debit Card Button via JS SDK -->
+        <div id="paypal-card-button-container"></div>
+      </div>
+      
+    </div>
 
-    <!-- Bitcoin Donation Section -->
+    <!-- Bitcoin Donate Section -->
     <div class="btc-donate">
       <h2>Donate with Bitcoin</h2>
       <p>Scan the QR code to send Bitcoin:</p>
@@ -116,7 +166,7 @@
   </footer>
 
   <script>
-    // Render the unified PayPal donation button
+    // Render the PayPal button for Credit/Debit Card Donations
     paypal.Buttons({
       style: {
         shape: 'rect',
@@ -125,7 +175,7 @@
         label: 'donate'
       },
       createOrder: function(data, actions) {
-        // Set donation amount. Change '10.00' as needed or make dynamic.
+        // Set donation amount. Modify '10.00' as needed, or make it dynamic.
         return actions.order.create({
           purchase_units: [{
             amount: {
@@ -139,7 +189,7 @@
           alert('Thank you for your donation, ' + details.payer.name.given_name + '!');
         });
       }
-    }).render('#paypal-button-container');
+    }).render('#paypal-card-button-container');
   </script>
 
 </body>
