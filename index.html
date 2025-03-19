@@ -99,7 +99,7 @@
       background: rgba(0, 0, 0, 0.8);
     }
   </style>
-  <!-- PayPal JS SDK for Credit/Debit Card Donation (Credit Card option will appear if available) -->
+  <!-- PayPal JS SDK for Credit/Debit Card Donations -->
   <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
 </head>
 <body>
@@ -112,15 +112,20 @@
     <p>Millions of children in Africa go to bed hungry every night. Your donation can help provide food and nutrition to those in need.</p>
 
     <!-- PayPal Donate Button (Hosted Button) -->
-    <a href="https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID" class="button">Donate with PayPal</a>
-    
-    <!-- PayPal Credit/Debit Card Donation Button via JS SDK -->
+    <form action="https://www.paypal.com/donate" method="post" target="_top">
+      <input type="hidden" name="hosted_button_id" value="JRPXRVT6WQP7J" />
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+      <img alt="" border="0" src="https://www.paypal.com/en_KE/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+
+    <!-- PayPal Credit/Debit Card Donation Button -->
     <div id="paypal-button-container" style="margin: 20px auto;"></div>
 
     <!-- Bitcoin Donate Section -->
     <div class="btc-donate">
       <h2>Donate with Bitcoin</h2>
       <p>Scan the QR code to send Bitcoin:</p>
+      <!-- Ensure your btc-qr.png is in the 'images' folder -->
       <img src="images/btc-qr.png" alt="Bitcoin QR Code" class="btc-qr">
       <p class="btc-address">17FQMZT79jshicasLJzgx4m8GKNxDAsKiv</p>
     </div>
@@ -131,7 +136,7 @@
   </footer>
 
   <script>
-    // Render the PayPal button for Credit/Debit Card Donation
+    // Render the PayPal button for Credit/Debit Card Donations
     paypal.Buttons({
       style: {
         shape: 'rect',
